@@ -1,0 +1,140 @@
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Music Survey</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+    }
+
+    form {
+      background-color: #fff;
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    fieldset {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+
+    legend {
+      font-weight: bold;
+      padding: 0 10px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .buttons {
+      text-align: center;
+    }
+
+    .buttons input {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .buttons input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .buttons input[type="reset"] {
+      background-color: #f44336;
+      color: white;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="https://webdevbasics.net/scripts/demo.php" method="post">
+    <h2>Music Survey Form</h2>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+
+    <label for="email">E-mail Address:</label>
+    <input type="email" id="email" name="email">
+
+    <label for="comments">Why do you like music?</label>
+    <textarea id="comments" name="comments" rows="3" cols="60"></textarea>
+
+    <fieldset>
+      <legend>Favorite Type of Music</legend>
+      <input type="radio" id="rock" name="genre" value="rock">
+      <label for="rock">Rock</label><br>
+      <input type="radio" id="pop" name="genre" value="pop">
+      <label for="pop">Pop</label><br>
+      <input type="radio" id="classical" name="genre" value="classical">
+      <label for="classical">Classical</label><br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Favorite Instrument</legend>
+      <select name="instrument" size="3">
+        <option value="guitar">Guitar</option>
+        <option value="piano">Piano</option>
+        <option value="drums">Drums</option>
+        <option value="violin">Violin</option>
+      </select>
+    </fieldset>
+
+    <label for="musicdate">When was your favorite album released?</label>
+    <input type="date" id="musicdate" name="musicdate">
+
+    <div class="buttons">
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </div>
+  </form>
+
+  <footer>
+    Created by: Dylan Duke<br>
+    Email: dylanduke@email.com
+  </footer>
+
+</body>
+</html>
